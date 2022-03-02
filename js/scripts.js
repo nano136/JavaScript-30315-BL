@@ -1,13 +1,18 @@
- //Calcula el precio total de juegos en steam en AR$, le aplica los impuestos.
- let precio = prompt("Cuanto vale tu juego?");
+console.log("Arrays");
 
- function Impuestos(precio) {
-     return (precio * 64) / 100;
- }
+let carritoDeCompras = ["Agua", "Snack", "Gaseosa", "Galletitas"]
 
- function precioFinal(precio,Impuestos){
-     let result = parseInt(precio) + parseInt(Impuestos)
-     return result
- }
- alert(`Tu juego vale ${precioFinal(precio,Impuestos)}AR$ contando impuestos`)
- 
+for (let i = 0; i < carritoDeCompras.length; i++) {
+    console.log(i, carritoDeCompras[i]);
+    
+}
+
+carritoDeCompras.push("Pan")
+
+const productoQuitado = carritoDeCompras.shift()
+
+
+console.log(productoQuitado, carritoDeCompras.join(' || '))
+
+
+
