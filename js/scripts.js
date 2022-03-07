@@ -1,18 +1,20 @@
-console.log("Arrays");
+const productos = [
+    {id: 1, titulo: "G2 ProPlayer Hoodie 2020", stock: 50},
+    {id: 2, titulo:"G2 ProPlayer Hoodie 2021", stock: 10},
+    {id: 3, titulo:"G2 ProPlayer Hoodie 2022", stock: 30},
+]
 
-let carritoDeCompras = ["Agua", "Snack", "Gaseosa", "Galletitas"]
+productos.forEach( e => {
+    console.log(e.titulo);
+    console.log("El stock es disponible es de " + e.stock +" "+ "unidades")
+})
 
-for (let i = 0; i < carritoDeCompras.length; i++) {
-    console.log(i, carritoDeCompras[i]);
-    
+let removerCartItemButtons = document.getElementsByClassName("btn-danger")
+console.log(removerCartItemButtons)
+
+for (let i = 0; i < removerCartItemButtons.length; i++){
+    let button = removerCartItemButtons[i]
+    button.addEventListener("click", function(){
+        console.log("clicked")
+    })
 }
-
-carritoDeCompras.push("Pan")
-
-const productoQuitado = carritoDeCompras.shift()
-
-
-console.log(productoQuitado, carritoDeCompras.join(' || '))
-
-
-
